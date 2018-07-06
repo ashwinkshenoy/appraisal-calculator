@@ -1,6 +1,6 @@
 {
-  "name": "I Don't Like Work",
-  "short_name": "IDLW",
+  "name": "Appraisal Calculator",
+  "short_name": "Appraisal Calc",
   "icons": [
     {
       "src": "/static/img/120.png",
