@@ -1,5 +1,5 @@
 # Appraisal Calculator
-> A Vue.js project
+
 
 <a href="http://ashwinshenoy.com/appraisal-calculator" target="_blank">Demo</a>
 
