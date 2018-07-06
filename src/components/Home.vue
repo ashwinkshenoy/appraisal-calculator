@@ -1,6 +1,9 @@
 <template>
   <div>
-    <h1 class="title">Appraisal Calculator</h1>
+    <h1 class="title">
+      <img src="@/assets/logo.svg" alt="logo" class="logo">
+      Appraisal Calculator
+    </h1>
     <br>
     <div class="grid-row">
       <div class="grid-col">
