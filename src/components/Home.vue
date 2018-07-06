@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="title">Appraisal Summary</h1>
+    <h1 class="title">Appraisal Calculator</h1>
     <br>
     <div class="grid-row">
       <div class="grid-col">
