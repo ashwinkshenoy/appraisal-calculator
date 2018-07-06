@@ -12,7 +12,7 @@
 
         <div class="grid-row2">
           <div class="grid-col">
-            <div class="form-label">Current CTC</div>
+            <div class="form-label">Current Fixed</div>
           </div>
           <div class="grid-col">
             <input type="number" class="in-txt" v-model.number="current.ctc">
@@ -39,7 +39,7 @@
 
         <div class="grid-row2">
           <div class="grid-col">
-            <div class="form-label bold">Sum Total</div>
+            <div class="form-label bold">Sum Total (CTC)</div>
           </div>
           <div class="grid-col">
             ₹{{currentSum || 0}}
@@ -48,7 +48,7 @@
 
         <div class="grid-row2">
           <div class="grid-col">
-            <div class="form-label bold">Var Percentage to CTC</div>
+            <div class="form-label bold">Var Percentage to Fixed</div>
           </div>
           <div class="grid-col">
             {{currentCtcVarPercentage || 0}}%
@@ -74,7 +74,7 @@
 
         <div class="grid-row2">
           <div class="grid-col">
-            <div class="form-label">New CTC</div>
+            <div class="form-label">New Fixed</div>
           </div>
           <div class="grid-col">
             <input type="text" class="in-txt" v-model.number="newSal.ctc">
@@ -101,7 +101,7 @@
 
         <div class="grid-row2">
           <div class="grid-col">
-            <div class="form-label bold">Sum Total</div>
+            <div class="form-label bold">Sum Total (CTC)</div>
           </div>
           <div class="grid-col">
             ₹{{newSum}}
@@ -110,7 +110,7 @@
 
         <div class="grid-row2">
           <div class="grid-col">
-            <div class="form-label bold">Var Percentage to CTC</div>
+            <div class="form-label bold">Var Percentage to Fixed</div>
           </div>
           <div class="grid-col">
             {{newCtcVarPercentage || 0}}%
