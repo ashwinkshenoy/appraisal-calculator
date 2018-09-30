@@ -6,44 +6,43 @@
 
 version: 2
 
-general:
+jobs:
   branches:
     ignore:
       - gh-pages
-
-jobs:
-  build:
-    docker:
-      # specify the version you desire here
-      - image: circleci/node:10
       
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
+      build:
+        docker:
+          # specify the version you desire here
+          - image: circleci/node:10
+          
+          # Specify service dependencies here if necessary
+          # CircleCI maintains a library of pre-built images
+          # documented at https://circleci.com/docs/2.0/circleci-images/
+          # - image: circleci/mongo:3.4.4
 
-    working_directory: ~/repo
+        working_directory: ~/repo
 
-    steps:
-      - checkout
+        steps:
+          - checkout
 
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+          # Download and cache dependencies
+          - restore_cache:
+              keys:
+              - v1-dependencies-{{ checksum "package.json" }}
+              # fallback to using the latest cache if no exact match is found
+              - v1-dependencies-
 
-      - run: yarn install
+          - run: yarn install
 
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-        
-      - run: yarn build
-      - run: git clone -b gh-pages git@github.com:ashwinkshenoy/appraisal-calculator.git /tmp/deploy
-      - run: cp -R dist/* /tmp/deploy
-      - run: git config --global user.email "bot@circleci.com"
-      - run: git config --global user.name "CircleCI Bot"
-      - run: cd /tmp/deploy && git add . && git commit -m "ci deploy" && git push origin gh-pages
+          - save_cache:
+              paths:
+                - node_modules
+              key: v1-dependencies-{{ checksum "package.json" }}
+            
+          - run: yarn build
+          - run: git clone -b gh-pages git@github.com:ashwinkshenoy/appraisal-calculator.git /tmp/deploy
+          - run: cp -R dist/* /tmp/deploy
+          - run: git config --global user.email "bot@circleci.com"
+          - run: git config --global user.name "CircleCI Bot"
+          - run: cd /tmp/deploy && git add . && git commit -m "ci deploy" && git push origin gh-pages
