@@ -207,7 +207,7 @@
       },
     },
     mounted() {
-      console.log('mounted')
+      console.log('mounted again');
     },
     methods: {},
   };
