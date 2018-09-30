@@ -37,7 +37,7 @@ jobs:
         
       - run: yarn build
       - run: git clone -b gh-pages git@github.com:ashwinkshenoy/appraisal-calculator.git /tmp/deploy
-      - run: rm /tmp/deploy/*
+      - run: rm -r /tmp/deploy/*
       - run: cp -R dist/* /tmp/deploy
       - run: git config --global user.email "bot@circleci.com"
       - run: git config --global user.name "CircleCI Bot"
