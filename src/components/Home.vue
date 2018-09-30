@@ -206,7 +206,9 @@
         return 0;
       },
     },
-    mounted() {},
+    mounted() {
+      console.log('mounted')
+    },
     methods: {},
   };
 </script>
