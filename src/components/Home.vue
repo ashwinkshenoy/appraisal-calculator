@@ -206,7 +206,6 @@
         return 0;
       },
     },
-    mounted() {},
   };
 </script>
 
