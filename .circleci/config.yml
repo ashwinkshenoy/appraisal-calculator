@@ -5,10 +5,11 @@
 
 
 version: 2
+
 general:
   branches:
-    only:
-      - master
+    ignore:
+      - gh-pages
 
 jobs:
   build:
