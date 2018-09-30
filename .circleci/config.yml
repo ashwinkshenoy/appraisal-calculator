@@ -6,11 +6,17 @@
 
 version: 2
 
-jobs:
+general:
   branches:
     ignore:
       - gh-pages
+
+jobs:
   build:
+    filters:
+      # Don't build master since that's for GitHub pages
+      branches:
+        ignore: gh-pages
     docker:
       # specify the version you desire here
       - image: circleci/node:10
