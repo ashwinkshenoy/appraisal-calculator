@@ -40,13 +40,4 @@ jobs:
       - run: cp -R dist/* /tmp/deploy
       - run: git config --global user.email "bot@circleci.com"
       - run: git config --global user.name "CircleCI Bot"
-      - run: cd /tmp/deploy && git add . && git commit -m "ci deploy" && git push origin gh-pages
-
-workflows:
-  version: 2
-  build_and_test:
-    jobs:
-      - build:
-          filters:
-            branches:
-              only: master
+      - run: cd /tmp/deploy && git add . && git commit -m "ci deploy" && git push origin gh-pagess
